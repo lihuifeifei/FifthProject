@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的绑定</title>
+</head>
+<body>
+
+
+    <button id="btn01">点击我</button>
+</body>
+
+<script type="text/javascript">
+    window.onload=function () {
+        var btn01=document.getElementById("btn01");
+        btn01.addEventListener("click",function () {alert(1)},false);
+      //addEventListener()k可以给元素绑定响应函数
+        // 参数1：事件的字符串，不要on
+        //参数2：回掉函数，当触发事件时该函数会被调用
+        //参数3：是否在捕获期间触发事件，需要布尔值，传false
+        //同时为一个事件绑定多个响应函数，按顺序执行
+        btn01.addEventListener("click",function () {alert(2)},false);
+    };
+
+
+</script>
+</html>
